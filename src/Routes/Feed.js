@@ -1,0 +1,1 @@
+export default () => "login SUCCESS!! make the main page!"

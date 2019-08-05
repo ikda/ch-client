@@ -1,3 +1,13 @@
-# ch-client
+# This is Clubhouse App
 
-with apollo etc.
+## working on...
+
+  - everything!! haha
+
+## Authenticate relate to do lists
+
+  - [] sign up
+  - [] sign in
+  - [] request key
+  - [] confirm key
+  
