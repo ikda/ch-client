@@ -1,42 +1,72 @@
 import React, {Component} from 'react';
-import Toolbar from '../Components/Toolbar/Toolbar';
-import SideDrawer from '../Components/SideDrawer/SideDrawer';
-import Backdrop from '../Components/Backdrop/Backdrop';
+import styled from "styled-components";
 
-class Feed extends Component {
-  state = {
-    sideDrawerOpen: false
-  };
-  drawerToggleClickHandler = () => {
-    this.setState((prevState) => {
-      return {sideDrawerOpen: !prevState.sideDrawerOpen};
-    });
-  };
+//grid template will be change..
+const HomeLayout = styled.div`
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 650px 1fr;
+  grid-template-rows: auto 300px auto;
+`;
 
-  backdropClickHandler = () => {
-    this.setState({sideDrawerOpen: false});
-  };
+const ClubhouseHome = styled.div`
+  display: felx;
+  grid-column: 1;
+  grid-row: 1;
+  background-color: #f5f5ff;
+  grid-template-columns: 1fr auto auto;
+  grid-template-rows: 40px 150px;
+`;
 
 
-  render() {
-    let sideDrawer;
-    let backdrop;
 
-    if (this.state.sideDrawerOpen) {
-      sideDrawer = <SideDrawer />;
-      backdrop = <Backdrop click={this.backdropClickHandler} />
-    }
-    return (
-      <div style={{height: '100%'}}>
-        <Toolbar drawerToggleClickHandler={this.drawerToggleClickHandler}/>
-        <SideDrawer show={this.state.sideDrawerOpen} />
-        {Backdrop}
-        <main style={{marginTop:'64px'}}>
-          <p>this is the profile page!!</p>
-        </main>
-      </div>
-    );
-  }
-}
 
-export default Feed;
+
+const Profile = styled.div`
+  grid-column: 2;
+  grid-row: 1;
+  background-color: #362234;
+`;
+
+const Photo = styled.div`
+  grid-column: span 2;
+  grid-row: 2;
+  background-color: yellow;
+`;
+
+const MySchedule = styled.div`
+  grid-column: 1;
+  grid-row: 3;
+`;
+
+const MyRank = styled.div`
+  grid-column: 2;
+  grid-row: 3;
+`;
+
+const Box = styled.div`
+  ${props => props.theme.whiteBox}
+    border-radius: 0px;
+    width: 100%;
+    max-width: 250px;
+`
+
+export default () => (
+  <HomeLayout>
+    <ClubhouseHome>
+      <div className="clubhousehome-title">Clubhouse</div>
+      <ul className="clubhousehome-title-items">
+        <li><a href="/">+new clubhouse</a></li>
+      </ul>
+      <Box></Box>
+      <ul className="clubhousehome-article-items">
+        <li><a href="/">1</a></li>
+        <li><a href="/">2</a></li>
+      </ul>
+    </ClubhouseHome>
+    <Profile>Profile</Profile>
+    <Photo>Photo</Photo>
+    <MySchedule>My Schedule</MySchedule>
+    <MyRank>My Rank</MyRank>
+  </HomeLayout>
+);

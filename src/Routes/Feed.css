@@ -1,0 +1,46 @@
+.homearea {
+  font-family: sans-serif;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 65% auto;
+  grid-template-rows: 100px 100px auto;
+  grid-template-areas: "ch pr"
+                       "ph ph"
+                       "sch mr";
+
+}
+
+.clubhouse {
+  background: red;
+  grid-area: ch;
+
+}
+
+.profile {
+  background: red;
+  grid-area: pr;
+}
+
+.photo {
+  background: red;
+  grid-area: ph;
+  grid-column-end: span 2;
+}
+
+.schedule {
+  background: red;
+  grid-area: sch;
+}
+
+.myrank {
+  background: red;
+  grid-area: mr;
+}
+
+@media (min-width:768px) {
+  .profile,
+  .photo,
+  .myrank {
+    display: none;
+  }
+}
