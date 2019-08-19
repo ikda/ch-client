@@ -1,0 +1,60 @@
+.toolbarmain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #f5f5ff;
+  height: 56px;
+}
+
+.toolbarmain__navigation {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+
+
+.toolbarmain__logo {
+  margin-left: 0.5rem;
+}
+
+
+
+.toolbarmain__logo a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.toolbarmain_navigation_items ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.toolbarmain_navigation_items li {
+  padding: 0 0.5rem;
+}
+
+.toolbarmain_navigation_items a {
+  color: black;
+  text-decoration: none;
+}
+
+.toolbarmain_navigation_items a:hover,
+.toolbarmain_navigation_items a:active {
+  color: grey;
+}
+
+@media (min-width:768px) {
+  .toolbarmain_navigation_items {
+    display: none;
+  }
+}

@@ -51,7 +51,7 @@ const Form = styled(Box)`
 export default ({
     action,
     setAction,
-    username,    
+    username,
     firstName,
     lastName,
     email,
@@ -87,19 +87,19 @@ export default ({
             {action !== "confirm" && (
             <StateChanger>
                 {action === "logIn" ? (
-                    <> 
-                    Don't have an account?{" "} 
+                    <>
+                    Don't have an account?{" "}
                     <Link onClick={() => setAction("signUp")}>Sign up</Link>
                     </>
                 )  :  (
                     <>
-                    Have an account?{" "} 
+                    Have an account?{" "}
                     <Link onClick={() => setAction("logIn")}>Log in</Link>
-                    </>  
-                ) 
+                    </>
+                )
                 }
             </StateChanger>)}
-            
+
         </Wrapper>
     );
 }
