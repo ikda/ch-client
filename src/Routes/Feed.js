@@ -1,68 +1,51 @@
 import React, {Component} from 'react';
 import styled from "styled-components";
+import HomeLayout from "../Components/Layout/HomeLayout";
+import ClubhouseHome from "../Components/Layout/ClubhouseHome";
+import Profile from "../Components/Layout/Profile";
+import Photo from "../Components/Layout/Photo";
+import MySchedule from "../Components/Layout/MySchedule";
+import MyRank from "../Components/Layout/MyRank";
 
-//grid template will be change..
-const HomeLayout = styled.div`
-  display: grid;
-  height: 100vh;
-  grid-template-columns: 650px 1fr;
-  grid-template-rows: auto 300px auto;
-`;
-
-const ClubhouseHome = styled.div`
-  display: felx;
+const ChTittle = styled.div`
   grid-column: 1;
   grid-row: 1;
-  background-color: #f5f5ff;
-  grid-template-columns: 1fr auto auto;
-  grid-template-rows: 40px 150px;
 `;
 
-
-
-
-
-const Profile = styled.div`
+const Spacer = styled.div`
   grid-column: 2;
   grid-row: 1;
-  background-color: #362234;
 `;
 
-const Photo = styled.div`
-  grid-column: span 2;
+const ChTittleItems = styled.div`
+  grid-column: 3;
+  grid-row: 1;
+`;
+
+const ChArticleItems = styled.div`
+  grid-column: 1;
   grid-row: 2;
-  background-color: yellow;
 `;
 
-const MySchedule = styled.div`
-  grid-column: 1;
-  grid-row: 3;
-`;
-
-const MyRank = styled.div`
+const ChArticleItems2 = styled.div`
   grid-column: 2;
-  grid-row: 3;
+  grid-row: 2;
 `;
-
-const Box = styled.div`
-  ${props => props.theme.whiteBox}
-    border-radius: 0px;
-    width: 100%;
-    max-width: 250px;
-`
 
 export default () => (
   <HomeLayout>
     <ClubhouseHome>
-      <div className="clubhousehome-title">Clubhouse</div>
-      <ul className="clubhousehome-title-items">
-        <li><a href="/">+new clubhouse</a></li>
-      </ul>
-      <Box></Box>
-      <ul className="clubhousehome-article-items">
-        <li><a href="/">1</a></li>
-        <li><a href="/">2</a></li>
-      </ul>
+      <ChTittle className="clubhousehome-title">Clubhouse</ChTittle>
+      <Spacer></Spacer>
+      <ChTittleItems className="clubhousehome-title-items">
+        <a href="/">+new clubhouse</a>
+      </ChTittleItems>
+      <ChArticleItems className="clubhousehome-article-items">
+        <a href="/">1</a>
+      </ChArticleItems>
+      <ChArticleItems2>
+        <a href="/">2</a>
+      </ChArticleItems2>
     </ClubhouseHome>
     <Profile>Profile</Profile>
     <Photo>Photo</Photo>
