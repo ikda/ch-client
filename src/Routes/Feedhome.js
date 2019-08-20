@@ -54,3 +54,12 @@ export default () => (
     <MyRank>My Rank</MyRank>
   </HomeLayout>
 );
+
+//미디어 쿼리 참조
+@media (min-width:768px) {
+  .profile,
+  .photo,
+  .myrank {
+    display: none;
+  }
+}
