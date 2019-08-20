@@ -55,7 +55,7 @@ export default () => (
   </HomeLayout>
 );
 
-//미디어 쿼리 참조
+//미디어 쿼리 참조...
 @media (min-width:768px) {
   .profile,
   .photo,
