@@ -244,7 +244,7 @@ export default () => (
 							<ProfileContent1 class="nZSzR">
 								<h1 class="">wwlee0405</h1>
 								<ProfileContent1_a class="thEYr " href="/">
-									<Button text={"Profile edit"} />
+									<Button text={"Edit Profile"} />
 								</ProfileContent1_a>
 							</ProfileContent1>
 							<ProfileContent2_ul class="">
