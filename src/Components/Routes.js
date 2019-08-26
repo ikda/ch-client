@@ -4,27 +4,27 @@ import { Route, Switch } from "react-router-dom";
 import Auth from "../Routes/Auth";
 import Feed from "../Routes/Feed";
 import Explore from "../Routes/Explore";
+import Profile from "../Routes/Profile";
 
 const LoggedInRoutes = () => (
-    <Switch>
-        <Route exact path="/" component={Feed} />
-        <Route path="/explore" component={Explore} />
-    </Switch>
-)
+	<Switch>
+		<Route exact path="/" component={Feed} />
+		<Route exact path="/me" component={Profile} />
+		<Route path="/explore" component={Explore} />
+	</Switch>
+);
 
 const LoggedOutRoutes = () => (
-    <Switch>
-        <Route exact path="/" component={Auth} />
-    </Switch>
-)
+	<Switch>
+		<Route exact path="/" component={Auth} />
+	</Switch>
+);
 
-const AppRouter = ({ isLoggedIn }) => (
-    isLoggedIn ? <LoggedInRoutes /> : <LoggedOutRoutes />
-)
+const AppRouter = ({ isLoggedIn }) =>
+	isLoggedIn ? <LoggedInRoutes /> : <LoggedOutRoutes />;
 
 AppRouter.propTypes = {
-    isLoggedIn: PropTypes.bool.isRequired
-}
-
+	isLoggedIn: PropTypes.bool.isRequired
+};
 
 export default AppRouter;
