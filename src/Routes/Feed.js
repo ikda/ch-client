@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import Profile from "./Profile";
+import ProfileRank from "./ProfileRank";
 
 //full layout part: 05~39
 const HomeLayout = styled.div`
@@ -34,7 +36,7 @@ const Article53 = styled.div`
 	grid-template-columns: 5fr 3fr;
 	background-color: green;
 	& > div:last-child {
-		background-color: red;
+		background-color: #f8f8ff;
 	}
 `;
 
@@ -63,34 +65,6 @@ const ChListToolbarItems = styled.div`
 	text-align: right;
 `;
 
-//Profile part
-const Profile = styled.div`
-	display: block;
-	grid-template-columns: repeat(2, auto);
-`;
-
-const ProfileToolbar = styled.div`
-	display: flex;
-	grid-template-columns: repeat(2, auto);
-	padding: 10px;
-	margin-bottom: 15px;
-	font-size: 20px;
-	text-align: left;
-`;
-
-const ProfileArticle = styled.div`
-	display: flex;
-	grid-template-columns: repeat(2, auto);
-`;
-
-const ProfileItems = styled.div`
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	padding: 10px;
-	font-size: 15px;
-	text-align: left;
-`;
-
 //Schedule part
 const Schedule = styled.div`
 	display: block;
@@ -105,26 +79,6 @@ const ScheduleToolbar = styled.div`
 	text-align: left;
 `;
 
-//MyRank part
-const MyRank = styled.div`
-	display: block;
-	grid-template-columns: repeat(2, auto);
-`;
-
-const RankArticle = styled.div`
-	display: block;
-	grid-template-columns: repeat(2, auto);
-`;
-
-const RankProvision = styled.div`
-	display: flex;
-	grid-template-columns: repeat(2, auto);
-`;
-
-const RankItems = styled.div`
-	display: grid;
-	grid-template-columns: repeat(2, auto);
-`;
 
 export default () => (
 	<>
@@ -156,26 +110,7 @@ export default () => (
 						<div className="chlistarticle"><a href="/">my club 3rd box</a></div>
 		      </ChListArticle>
 				</ClubhouseList>
-				<Profile>
-					<ProfileToolbar>
-						<div className="profiletoolbarprev"><a href="/">X</a></div>
-						<div>Profile</div>
-					</ProfileToolbar>
-					<ProfileArticle>
-						<div>이미지</div>
-						<ProfileItems>
-							<div>NAME</div>
-							<div>name</div>
-							<div>AREA</div>
-							<div>area</div>
-							<div>POSITION</div>
-							<div>position</div>
-							<div>Main CLUBHOUSE</div>
-							<div>main CLUBHOUSE</div>
-						</ProfileItems>
-					</ProfileArticle>
-				</Profile>
-
+				<Profile />
 			</Article53>
 			<div>사진</div>
 			<Article53>
@@ -188,23 +123,7 @@ export default () => (
 						<div>message2</div>
 					</div>
 				</Schedule>
-				<MyRank>
-					<div>rank</div>
-					<RankArticle>
-						<div>Football Rank</div>
-						<RankProvision>
-							<div>글로벌/국가/지역 순위</div>
-							<RankItems>
-								<div>1</div>
-								<div>2</div>
-								<div>3</div>
-								<div>4</div>
-								<div>5</div>
-								<div>6</div>
-							</RankItems>
-						</RankProvision>
-					</RankArticle>
-				</MyRank>
+				<ProfileRank />
 			</Article53>
 		</HomeLayout>
 	</>
