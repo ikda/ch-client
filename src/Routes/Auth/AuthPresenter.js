@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Input from "../../Components/Input";
-import Button from "../../Components/Button";
+import LogButton from "../../Components/LogButton";
 
 
 const Wrapper = styled.div`
@@ -65,7 +65,7 @@ export default ({
                 {action === "logIn" && (
                 <form onSubmit={onSubmit}>
                     <Input placeholder={"Email"} {...email} type="email"/>
-                    <Button text={"Log In"} />
+                    <LogButton text={"Log In"} />
                 </form>
             )}
             {action === "signUp" && (
@@ -74,13 +74,13 @@ export default ({
                     <Input placeholder={"First name"} {...firstName}/>
                     <Input placeholder={"Last name"} {...lastName}/>
                     <Input placeholder={"Email"} {...email} type="email"/>
-                    <Button text={"Sign up"} />
+                    <LogButton text={"Sign up"} />
                 </form>
             )}
             {action === "confirm" && (
                 <form onSubmit={onSubmit}>
                     <Input placeholder="Paste your secret" required {...secret} />
-                    <Button text={"Confirm"} />
+                    <LogButton text={"Confirm"} />
                 </form>
             )}
             </Form>
