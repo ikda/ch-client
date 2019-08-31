@@ -1,23 +1,23 @@
-import React from "react";
 import styled from "styled-components";
-import propTypes from "prop-types";
 
-const Container = styled.button`
-    width: 100%;
-    border: 0;
-    border-radius: ${props => props.theme.borderRadius};
-    color: white;
-    font-weight: 600;
-    background-color: ${props => props.theme.blueColor};
-    text-align: center;
-    padding: 7px 0px;
-    font-size: 14px;
+const Button = styled.button`
+  font-size: 15px;
+  margin: 0px;
+  border-radius: 5px;
+
+  padding: ${props => props.btntheme.padding};
+  color: ${props => props.btntheme.fontcolor};
+  border: 1px solid ${props => props.btntheme.bordercolor};
+  background: ${props => props.btntheme.bgcolor};
 `;
 
-const Button = ({text}) => <Container>{text}</Container>
-
-Button.propTypes = {
-    text: propTypes.string.isRequired
-};
+Button.defaultProps = {
+  btntheme: {
+    padding: "5px 10px",
+    fontcolor: "#ffffff",
+    bordercolor: "#3897f0",
+    bgcolor: "#3897f0"
+  }
+}
 
 export default Button;

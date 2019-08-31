@@ -1,28 +1,45 @@
 import React from "react";
 import styled from "styled-components";
+import {device} from "../Styles/Devices";
 
 const RankLayout = styled.div`
 	display: block;
 	grid-template-columns: repeat(2, auto);
+	background: ${props => props.theme.webpagebgcolor};
 `;
 
-const RankTitle = styled.div`
-	padding: 20px 20px;
-	width: 100%;
+const RankWrap = styled.div`
+	height: 440px;
+	width: 628px;
+	margin: 0 auto;
+	padding: 0;
+	background: ${props => props.theme.articlebgcolor};
+	@media ${device.mobile} {
+    width: 414px;
+  }
+`;
+
+
+const Title = styled.div`
+	padding: 20px 40px;
 	font-size: 20px;
 	font-weight: 550;
 `;
 
-const RankArticle = styled.div`
+const Article = styled.div`
 	display: block;
 	grid-template-columns: repeat(2, auto);
-	padding: 10px 20px 0;
+	padding: 0;
+	width: 627px;
+	@media ${device.mobile} {
+    width: 414px;
+  }
 `;
 
-const RankItems = styled.div`
-	margin-bottom: 20px;
+const ItemsTitle = styled.div`
+	padding: 0 40px 30px;
 	font-size: 18px;
-	font-weight: 500;
+	font-weight: 550;
 `;
 
 const RankFlex = styled.div`
@@ -30,12 +47,29 @@ const RankFlex = styled.div`
 	grid-template-columns: repeat(2, auto);
 `;
 
-const Rank_Table = styled.div`
-	border-collapse: collapse;
-	width: 100%;
+const Table1 = styled.div`
+	padding: 0 60px;
+	width: 207px;
+	@media ${device.mobile} {
+    width: 138px;
+  }
 `;
 
-const RankItemsContent = styled.div`
+const Table2 = styled.div`
+	padding: 0 100px;
+	width: 420px;
+	@media ${device.mobile} {
+    width: 276px;
+  }
+`;
+
+const Content1 = styled.div`
+	padding: 0 16px 16px 0;
+	font-size: 15px;
+	font-weight: 600;
+`;
+
+const Content2 = styled.div`
 	padding: 0 16px 16px 0;
 	font-size: 15px;
 `;
@@ -45,82 +79,84 @@ class ProfileRank extends React.Component {
     return (
       <>
         <RankLayout>
-					<RankTitle>Rank</RankTitle>
-					<RankArticle>
-						<div class="">
-					 		<RankItems>Football Rank</RankItems>
-							<RankFlex>
-								<Rank_Table>
-									<tr>
-										<td>
-											<RankItemsContent>Global</RankItemsContent>
-										</td>
-										<td>
-											<RankItemsContent>1</RankItemsContent>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<RankItemsContent>National</RankItemsContent>
-										</td>
-										<td>
-											<RankItemsContent>1</RankItemsContent>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<RankItemsContent>Region</RankItemsContent>
-										</td>
-										<td>
-											<RankItemsContent>1</RankItemsContent>
-										</td>
-									</tr>
-								</Rank_Table>
-								<Rank_Table>
-									<tr>
-										<td>
-											<RankItemsContent>Games</RankItemsContent>
-										</td>
-										<td>
-											<RankItemsContent>500</RankItemsContent>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<RankItemsContent>Win</RankItemsContent>
-										</td>
-										<td>
-											<RankItemsContent>300</RankItemsContent>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<RankItemsContent>Lose</RankItemsContent>
-										</td>
-										<td>
-											<RankItemsContent>200</RankItemsContent>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<RankItemsContent>Goal</RankItemsContent>
-										</td>
-										<td>
-											<RankItemsContent>700</RankItemsContent>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<RankItemsContent>Assist</RankItemsContent>
-										</td>
-										<td>
-											<RankItemsContent>300</RankItemsContent>
-										</td>
-									</tr>
-								</Rank_Table>
-							</RankFlex>
-						</div>
-					</RankArticle>
+					<RankWrap>
+						<Title>Rank</Title>
+						<Article>
+							<div class="">
+						 		<ItemsTitle>Football Rank</ItemsTitle>
+								<RankFlex>
+									<Table1>
+										<tr>
+											<td>
+												<Content1>Global</Content1>
+											</td>
+											<td>
+												<Content1>1</Content1>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<Content1>National</Content1>
+											</td>
+											<td>
+												<Content1>1</Content1>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<Content1>Region</Content1>
+											</td>
+											<td>
+												<Content1>1</Content1>
+											</td>
+										</tr>
+									</Table1>
+									<Table2>
+										<tr>
+											<td>
+												<Content2>Games</Content2>
+											</td>
+											<td>
+												<Content2>500</Content2>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<Content2>Win</Content2>
+											</td>
+											<td>
+												<Content2>300</Content2>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<Content2>Lose</Content2>
+											</td>
+											<td>
+												<Content2>200</Content2>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<Content2>Goal</Content2>
+											</td>
+											<td>
+												<Content2>700</Content2>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<Content2>Assist</Content2>
+											</td>
+											<td>
+												<Content2>300</Content2>
+											</td>
+										</tr>
+									</Table2>
+								</RankFlex>
+							</div>
+						</Article>
+					</RankWrap>
 				</RankLayout>
     	</>
     );
