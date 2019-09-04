@@ -13,7 +13,7 @@ const Nav = styled.div`
 	width: 1351px;
 	height: 75px;
 	@media ${device.mobile} {
-    width: 414px;
+    display: none;
   }
 `;
 
@@ -28,13 +28,37 @@ const NavWrap1 = styled.div`
 	font-size: 30px;
 	font-weight: 550;
 	@media ${device.mobile} {
+    display: none;
+  }
+`;
+
+const MobileHeader = styled.div`
+
+	@media ${device.mobile} {
     width: 414px;
+		height: 75px;
+  }
+`;
+
+const HeaderWrap = styled.div`
+	display: none;
+	@media ${device.mobile} {
+    width: 414px;
+		display: flex;
+		align-items: center;
+		padding: 20px 26px;
+		height: 75px;
+		background: ${props => props.theme.navbgcolor};
+		border-bottom: 1px solid ${props => props.theme.bordercolor};
+		font-size: 30px;
+		font-weight: 550;
   }
 `;
 
 const Prev = styled.div`
-	padding: 0 32px 0 0;
-
+	@media ${device.mobile} {
+		padding: 0 32px 0 0;
+	}
 `;
 
 const Main = styled.div`
@@ -149,13 +173,18 @@ class Profile extends React.Component {
 			<>
 				<Layout>
 					<Nav>
-						<NavWrap1>
+            <NavWrap1>
+              <span>Nav</span>
+            </NavWrap1>
+          </Nav>
+					<MobileHeader>
+						<HeaderWrap>
 							<Prev className="prev">
 								<a href="/">X</a>
 							</Prev>
 							<span>Profile</span>
-						</NavWrap1>
-					</Nav>
+						</HeaderWrap>
+					</MobileHeader>
 					<Main>
 						<Article>
 

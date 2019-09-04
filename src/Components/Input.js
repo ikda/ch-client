@@ -1,41 +1,41 @@
-import React from "react";
 import styled from "styled-components";
-import propTypes from "prop-types";
 
-const Container = styled.input`
-    border: 0;
-    border: ${props => props.theme.boxBorder};
-    border-radius: ${props => props.theme.borderRadius};
-    background-color: ${props => props.theme.bgColor};
-    height: 35px;
-    font-size: 12px;
-    padding: 0px 15px;
+const Input = styled.input`
+  padding: ${props => props.intheme.padding};
+  margin: 0;
+  height: ${props => props.intheme.height};
+  width: ${props => props.intheme.width};
+  color: #262626;
+  background: #F8F8FF;
+  box-sizing: ${props => props.intheme.boxsizing};
+  border: ${props => props.intheme.border};
+  border-bottom: ${props => props.intheme.bdbottom};
+  border-radius: ${props => props.intheme.bdradius};
+  font-size: ${props => props.intheme.fontsize};
+  background-image: ${props => props.intheme.bgimage};
+  background-position: ${props => props.intheme.bgposition};
+  background-repeat: ${props => props.intheme.bgrepeat};
 `;
 
-const Input = ({
-    placeholder, 
-    required = true, 
-    value, 
-    onChange, 
-    type="text",
-    className
+// when you use backgroundimage
+// background-image ex)-> url('searchicon.png');
+// background-position  ex)-> 10px 10px;
+// background-repeat  ex)-> no-repeat;
 
-}) => (
-<Container
-    className={className}
-    placeholder={placeholder} 
-    required={required} 
-    value={value} 
-    onChange={onChange} 
-    type={type} />
-);
-
-Input.propTypes = {
-    placeholder: propTypes.string.isRequired,
-    required: propTypes.bool,
-    value: propTypes.string.isRequired,
-    onChange: propTypes.func.isRequired,
-    type: propTypes.string
+Input.defaultProps = {
+  intheme: {
+    padding: "0 10px",
+    height: "4em",
+    width: "auto",
+    boxsizing: "border-box",
+    border: "none",
+    bdbottom: "1px solid black",
+    bdradius: "none",
+    fontsize: "16px",
+    bgimage: "none",
+    bgposition: "none",
+    bgrepeat: "none"
+  }
 }
 
 export default Input;
