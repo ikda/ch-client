@@ -2,39 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import ProfileRank from "./ProfileRank";
 import {device} from "../Styles/Devices";
+import MobileToolbar from "../Components/MobileToolbar";
+import Nav from "../Components/Nav";
 
 const Layout = styled.div`
 	display: block;
 	grid-template-columns: repeat(2, auto);
 	background: ${props => props.theme.webpagebgcolor};
-`;
-
-const Nav = styled.div`
-	width: 1351px;
-	height: 75px;
-	@media ${device.mobile} {
-    width: 414px;
-  }
-`;
-
-const NavWrap1 = styled.div`
-	display: flex;
-	align-items: center;
-	padding: 20px 26px;
-	width: 1351px;
-	height: 75px;
-	background: ${props => props.theme.navbgcolor};
-	border-bottom: 1px solid ${props => props.theme.bordercolor};
-	font-size: 30px;
-	font-weight: 550;
-	@media ${device.mobile} {
-    width: 414px;
-  }
-`;
-
-const Prev = styled.div`
-	padding: 0 32px 0 0;
-
 `;
 
 const Main = styled.div`
@@ -148,14 +122,8 @@ class Profile extends React.Component {
 		return (
 			<>
 				<Layout>
-					<Nav>
-						<NavWrap1>
-							<Prev className="prev">
-								<a href="/">X</a>
-							</Prev>
-							<span>Profile</span>
-						</NavWrap1>
-					</Nav>
+					<Nav />
+					<MobileToolbar text={"Prfile"} />
 					<Main>
 						<Article>
 

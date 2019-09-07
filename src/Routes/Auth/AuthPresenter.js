@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Input from "../../Components/Input";
+import LogInput from "../../Components/LogInput";
 import LogButton from "../../Components/LogButton";
 
 
@@ -64,22 +64,22 @@ export default ({
             <Form>
                 {action === "logIn" && (
                 <form onSubmit={onSubmit}>
-                    <Input placeholder={"Email"} {...email} type="email"/>
+                    <LogInput placeholder={"Email"} {...email} type="email"/>
                     <LogButton text={"Log In"} />
                 </form>
             )}
             {action === "signUp" && (
                 <form onSubmit={onSubmit}>
-                    <Input placeholder={"Username"} {...username} />
-                    <Input placeholder={"First name"} {...firstName}/>
-                    <Input placeholder={"Last name"} {...lastName}/>
-                    <Input placeholder={"Email"} {...email} type="email"/>
+                    <LogInput placeholder={"Username"} {...username} />
+                    <LogInput placeholder={"First name"} {...firstName}/>
+                    <LogInput placeholder={"Last name"} {...lastName}/>
+                    <LogInput placeholder={"Email"} {...email} type="email"/>
                     <LogButton text={"Sign up"} />
                 </form>
             )}
             {action === "confirm" && (
                 <form onSubmit={onSubmit}>
-                    <Input placeholder="Paste your secret" required {...secret} />
+                    <LogInput placeholder="Paste your secret" required {...secret} />
                     <LogButton text={"Confirm"} />
                 </form>
             )}

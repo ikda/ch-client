@@ -19,7 +19,6 @@ const RankWrap = styled.div`
   }
 `;
 
-
 const Title = styled.div`
 	padding: 20px 40px;
 	font-size: 20px;
