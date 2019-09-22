@@ -16,8 +16,8 @@ export default {
                background-color:white;
               `,
     //page color
-    webpagebgcolor: "#E0FFFF", //LightCyan
+    webpagebgcolor: "#E0FFFF", //LightCyan #E0FFFF
     articlebgcolor: "#F8F8FF", //GhostWhite
-    navbgcolor: "#FAFAFA", //White
+    navbgcolor: "rgb(52, 168, 83)", //green
     bordercolor: "#E6E6E6", //something grey
 }

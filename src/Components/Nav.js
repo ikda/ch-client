@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {device} from "../Styles/Devices";
 
 const Layout = styled.div`
-	width: 1351px;
+	width: 100%;
 	height: 75px;
 	@media ${device.mobile} {
     display: none;
@@ -14,7 +14,7 @@ const Wrap = styled.div`
 	display: flex;
 	align-items: center;
 	padding: 20px 26px;
-	width: 1351px;
+	width: 100%;
 	height: 75px;
 	background: ${props => props.theme.navbgcolor};
 	border-bottom: 1px solid ${props => props.theme.bordercolor};

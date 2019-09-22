@@ -6,7 +6,7 @@ import propTypes from "prop-types";
 const Layout = styled.div`
 
 	@media ${device.mobile} {
-    width: 414px;
+    width: 100%;
 		height: 75px;
   }
 `;
@@ -14,7 +14,7 @@ const Layout = styled.div`
 const Wrap = styled.div`
 	display: none;
 	@media ${device.mobile} {
-    width: 414px;
+    width: 100%;
 		display: flex;
 		align-items: center;
 		padding: 20px 26px;

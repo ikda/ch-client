@@ -18,7 +18,7 @@ const Main = styled.div`
 	padding: 0;
 	background: ${props => props.theme.articlebgcolor};
 	@media ${device.mobile} {
-    width: 414px;
+    width: 100%;
   }
 `;
 

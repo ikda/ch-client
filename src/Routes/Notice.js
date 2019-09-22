@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import {device} from "../Styles/Devices";
-import FeedArticle from "../Components/FeedArticle";
-import WebToolbar from "../Components/WebToolbar";
+import Header from "../Components/Header";
+import NavFixed from "../Components/NavFixed";
+import NoticeArticle from "../Components/NoticeArticle";
 
 const Layout = styled.div`
 	display: block;
@@ -21,19 +22,22 @@ const Main = styled.div`
 	}
 `;
 
-class FeedFeed extends React.Component {
+class Notice extends React.Component {
   render () {
     return (
       <>
         <Layout>
-					<WebToolbar />
-
+					<Header />
+          <NavFixed />
+					
 					<Main>
 
-            <FeedArticle />
-            <FeedArticle />
-            <FeedArticle />
-						<FeedArticle />
+						<NoticeArticle />
+						<NoticeArticle />
+						<NoticeArticle />
+						<NoticeArticle />
+						<NoticeArticle />
+
 
 					</Main>
 				</Layout>
@@ -42,4 +46,4 @@ class FeedFeed extends React.Component {
   }
 }
 
-export default FeedFeed;
+export default Notice;
