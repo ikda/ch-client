@@ -14,7 +14,6 @@ const Layout = styled.div`
 const Wrap = styled.div`
 	display: flex;
 	align-items: center;
-	list-style-type: none;
 	padding: 20px 26px;
 	width: 100%;
 	height: 75px;

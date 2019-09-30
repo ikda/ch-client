@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {device} from "../Styles/Devices";
 import Header from "../Components/Header";
 import NavFixed from "../Components/NavFixed";
-import NoticeArticle from "../Components/NoticeArticle";
+import NoticeContent from "../Components/NoticeContent";
 
 const Layout = styled.div`
 	display: block;
@@ -29,14 +29,13 @@ class Notice extends React.Component {
         <Layout>
 					<Header />
           <NavFixed />
-					
+
 					<Main>
 
-						<NoticeArticle />
-						<NoticeArticle />
-						<NoticeArticle />
-						<NoticeArticle />
-						<NoticeArticle />
+						<NoticeContent />
+						<NoticeContent />
+						<NoticeContent />
+						<NoticeContent />
 
 
 					</Main>

@@ -8,6 +8,7 @@ import Profile from "../Routes/Profile";
 import EditProfile from "../Routes/EditProfile";
 import Feed from "../Routes/Feed";
 import Notice from "../Routes/Notice";
+import Rank from "../Routes/Rank";
 import Test from "../Routes/Test";
 
 const LoggedInRoutes = () => (
@@ -17,6 +18,7 @@ const LoggedInRoutes = () => (
 		<Route exact path="/me/edit" component={EditProfile} />
 		<Route exact path="/feed" component={Feed} />
 		<Route exact path="/notice" component={Notice} />
+		<Route exact path="/rank" component={Rank} />
 		<Route path="/explore" component={Explore} />
 		<Route path="/test" component={Test} />
 	</Switch>

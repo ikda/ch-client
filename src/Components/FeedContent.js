@@ -91,13 +91,13 @@ const HitsSeciton = styled.div`
   font-size: 10px;
 `;
 
-const FeedArticle = () => (
+const FeedContent = () => (
   <Layout>
     <Header>
       <ImgWrap role="button" tabindex="0">
 
         <Imgbox role="link" tabindex="0">
-          <img alt="martatanseyphotography님의 프로필 사진" src="/" width="100%" height="100%" />
+          <img alt="wwlee님의 프로필 사진" src="/" width="100%" height="100%" />
         </Imgbox>
       </ImgWrap>
       <HeaderArticle>
@@ -108,7 +108,7 @@ const FeedArticle = () => (
         </ID>
         <AreaAndTime class="">
           <div>
-            <a class="" href="/">London, UK</a>
+            <span class="">London, UK</span>
           </div>
           <Time class="">
             <span>2/15/19, 5:02 AM</span>
@@ -151,4 +151,4 @@ const FeedArticle = () => (
   </Layout>
 );
 
-export default FeedArticle;
+export default FeedContent;

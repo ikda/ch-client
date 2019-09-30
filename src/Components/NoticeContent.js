@@ -59,7 +59,7 @@ const Article = styled.div`
 	padding-right: 20px;
 `;
 
-const NoticeArticle = () => (
+const NoticeContent = () => (
   <Layout>
     <ImgWrap>
       <ImgWrap1 class="" role="button" tabindex="0">
@@ -93,4 +93,4 @@ const NoticeArticle = () => (
 
 );
 
-export default NoticeArticle;
+export default NoticeContent;
